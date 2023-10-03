@@ -1,0 +1,65 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include <locale.h>
+#include <string.h>
+
+int main (){
+
+setlocale(LC_ALL, "portuguese");
+
+//VARIÁVEIS
+
+int primeiroValor;
+int segundoValor;
+float media;
+int produto;
+int soma;
+int menorValor;
+int maiorValor;
+
+
+    printf("Escreva um valor: ");
+   scanf("%d", &primeiroValor);
+    
+    printf("Escreva um valor: ");
+   scanf("%d", &segundoValor);
+
+   system (" cls || clear");
+    
+   soma = primeiroValor + segundoValor;
+   media  = soma / 2;
+   produto = primeiroValor * segundoValor;
+
+   //  EXIBINDO DADOS 
+    
+    if ( primeiroValor > segundoValor)
+    {
+    printf("Maior valor: %d \n");
+    }
+    else {
+    printf ("Menor valor: %d \n")  ;  
+    }
+    
+    
+    if ( segundoValor > primeiroValor)
+    {
+    printf("Maior valor: %d \n");
+    }
+    else {
+    printf ("Menor valor: %d \n") ;
+    }
+    
+    
+    printf ("Resultado da soma: %d \n", soma );    
+    
+    printf ("Resultado do produto: %d \n", produto );    
+    
+    printf ("Resultado da media: %.1f \n", media);    
+    
+       
+    system ("pause") ;
+    return 0;
+
+
+
+    }
