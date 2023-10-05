@@ -1,0 +1,39 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include <locale.h>
+#include <string.h>
+
+
+int main (){
+
+setlocale(LC_ALL, "portuguese");
+
+//VARI�VEIS
+char login [200];
+char senha [200];
+
+char loginSalva [200] = "joao";
+char senhaSalva [200] = "joao1033";
+
+
+// SOLICTANDO DADOS 
+    
+printf("Digite seu usuario: ");
+gets(login);   
+
+printf("Digite sua senha: ");
+gets(senha);   
+
+
+if (strcmp(loginSalva,login) == 0 && strcmp (senhaSalva,senha) == 0)
+{
+    printf("Bem-vindo!"); 
+} else {
+    printf("Dados invalidos");
+}
+
+
+return 0;
+
+
+}
