@@ -1,0 +1,52 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <locale.h>
+
+int main (){
+
+
+setlocale (LC_ALL, "portuguese");
+
+//DECLARANDO VARIVAVEIS
+
+int codigo;
+int anosTrabalho;
+int nascimento;
+int idade;
+
+
+printf("Digite seu codigo: ");
+scanf("%d", &codigo);
+
+printf("Digite sua data de nascimento: ");
+scanf("%d", &nascimento);
+
+printf("Digite seu tempo de trabalho: ");
+scanf("%d", &anosTrabalho);
+
+system("cls || clear");
+
+idade = 2023 - nascimento ;
+
+
+anosTrabalho >= 30 || idade >= 65 ? printf ("APOSENTA \n") : printf ("NÃO APOSENTA \n");
+
+// EXIBINDO DADOS
+
+printf("Idade: %d \n", idade);
+printf("codigo: %d \n", codigo);
+printf("anos de trabalho: %d \n", anosTrabalho);
+
+
+
+
+
+
+
+
+
+return 0 ;
+
+
+}
