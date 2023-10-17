@@ -1,0 +1,55 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <locale.h>
+#include <ctype.h>
+int main()
+{
+
+    setlocale (LC_ALL, "portuguese");
+
+int i;
+
+// DE UM ATÉ 10
+// para i de 1 até 10 paso 1 faça
+// pra mudar o passo i+=2 ou i=i+2
+
+    for ( i = 1; i <= 10; i++)
+    {
+      printf (" 5 x %d = %d \n", i , 5 * i);
+    }
+    
+    printf("\n");
+
+     for ( i = 1; i <= 10; i++)
+    {
+      printf (" 7 x %d = %d \n", i ,  7 * i);
+    }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+return 0;
+
+
+
+}
