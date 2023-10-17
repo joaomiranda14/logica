@@ -1,0 +1,65 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <locale.h>
+#include <ctype.h>
+int main()
+{
+
+    setlocale (LC_ALL, "portuguese");
+
+int i,j;
+int soma = 0;
+
+// DE UM ATÉ 10
+// para i de 1 até 10 paso 1 faça
+// pra mudar o passo i+=2 ou i=i+2
+
+       
+    
+    for ( i = 1 ; i <= 5; i++){
+        printf ("Digite o %d° numero: ",i );
+        scanf ("%d", &j);  
+          
+   
+    soma = soma + j;  
+// OU SOMA += NUMERO ;
+
+    }
+    
+    
+
+    printf (" soma: %d" , soma);
+    
+        
+        
+    
+    
+    
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+return 0;
+
+
+
+}
