@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <string.h>
+
+int main (){
+
+ setlocale (LC_ALL, "portuguese");
+
+
+int i;
+int nota;
+float media;
+
+for ( i = 1; i < 2; i++)
+printf ("Digite a nota do aluno: ");
+        scanf("%d", &nota);
+{
+    do
+    {
+        
+        printf ("Digite a nota do aluno: ");
+        scanf("%d", &nota);
+    } while (nota < 1|| nota > 10);
+    
+}
+
+nota += nota;
+media = nota  / 2;
+printf("Media %.2f", media);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+return 0;
+}
