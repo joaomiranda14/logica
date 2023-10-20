@@ -1,0 +1,98 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <locale.h>
+#include <ctype.h>
+
+int main()
+{
+
+    setlocale(LC_ALL, "portuguese");
+
+    // DECLARANDO VARIVAVEIS
+
+int idade = 0;
+char sexo;
+float salario;
+int codigo;
+int mulheres;
+int contMulher;
+int somaSalario;
+float mediaSalario;
+int iSA;
+
+
+
+
+do
+{
+
+printf("\n");
+
+printf ("=== PESQUISA=== \n");
+printf ("1 - ADICIONAR NOVA PESSOA \n");
+printf ("2 - EXIBIR DADOS \n");
+
+
+
+printf("\n");
+
+
+    printf ("Digite sua idade: ");
+    scanf("%d", &idade);
+
+fflush(stdin);
+
+    printf ("Digite sua sexo: ");
+    scanf("%s", &sexo);
+
+fflush(stdin);
+
+   printf ("Digite sua salário: ");
+    scanf("%f", &salario);
+
+    
+somaSalario+=salario;
+iSA++;
+
+
+if (sexo == 'F' && salario == 5000 )
+{
+    contMulher += 1;
+}
+
+printf("\n");
+
+    
+    printf ("Digite o codigo: ");
+    scanf("%i", &codigo);
+
+
+} while (codigo != 2 );
+
+mediaSalario = somaSalario / iSA;
+
+
+
+
+if (codigo == 2 )
+
+
+
+ printf("\n");
+
+printf ("Quantidade de mulheres que recebem mais de 5 mil: %d" , contMulher);
+
+ printf("\n");
+
+printf ("Média salario: %.2f", mediaSalario);
+ 
+ printf("\n");
+
+
+
+
+    getchar();
+
+    return 0;
+}
