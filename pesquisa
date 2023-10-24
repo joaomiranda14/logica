@@ -1,0 +1,93 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <locale.h>
+
+int main()
+{
+
+    setlocale(LC_ALL, "portuguese");
+
+    int codigo;
+    int filhos;
+    float salario;
+    float mediaFilhos = 0;
+    float mediaSalario = 0;
+    int contadorFilho = 0;
+    int somafilho = 0;
+    int contadorSalario = 0;
+    int somaSalario = 0;
+    float maiorSalario = 0;
+    float menorSalario = 9999;
+
+
+
+
+
+
+    printf("====== PESQUISA ======\n\n");
+    printf("CODIGOS\n");
+
+    do
+    {
+
+        printf("1 - ADICIONAR FAMLIA\n");
+        printf("2 - SAIR E EXIBIR RESULTADOS\n\n");
+
+        printf("Digite o codigo\n");
+        scanf("%d", &codigo);
+
+        printf("\n");
+
+        switch (codigo)
+        {
+
+        case 1:
+
+            printf("Qual a renda da familia?: \n");
+            scanf("%f", &salario);
+            contadorSalario++;
+            somaSalario += salario;
+
+            fflush(stdin);
+
+            printf("Quantos filhos na familia?: \n");
+            scanf("%d", &filhos);
+            contadorFilho++;
+            somafilho += filhos;
+
+            system("cls || clear");
+            break;
+
+        case 2:
+            mediaFilhos = somafilho / contadorFilho;
+            mediaSalario = somaSalario / contadorFilho;
+            maiorSalario = salario > maiorSalario ? salario : maiorSalario;
+            menorSalario = salario < menorSalario ? salario : menorSalario;
+            
+
+
+            printf("Media de filhos: %.1f \n", mediaFilhos);
+            printf("Media de salario: %.2f \n", mediaSalario);
+            printf("Maior salario : %f \n", menorSalario);
+            printf("menor Salario : %f \n", maiorSalario);
+            
+
+            break;
+
+        default:
+            printf("Caso invalido\n");
+            break;
+        }
+    } while (codigo != 2);
+
+
+
+
+
+
+
+
+
+    return 0;
+}
