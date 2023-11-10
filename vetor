@@ -1,0 +1,61 @@
+#include <stdio.h>
+
+int main (){
+
+float notas[4];
+int i;
+float media;
+float soma;
+int quant;
+
+for ( i = 0; i < 4; i++)
+{
+printf("Digite a %d nota: ", i + 1);
+scanf("%f", &notas[i]);
+  soma += notas[i]; 
+    quant++;
+
+}
+
+printf("\nEXIBINDO NUMEROS\n");
+
+for ( i = 0; i < 4; i++)
+{
+
+  
+printf("%d° nota: %.0f\n", i+1, notas[i]);
+}
+
+
+media =  soma / i ;
+ printf("Media: %.1f\n", media);
+
+ if (media >= 7)
+ {
+    printf("APROVADO");
+    
+ } else if (media >=5 && media <7)
+ {
+    
+    printf("RECU");
+ } else if (media < 5 )
+ {
+    
+    printf("REPROVADO");
+ }
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+return 0;
+
+}
