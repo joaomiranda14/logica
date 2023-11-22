@@ -1,0 +1,65 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main()
+{
+
+    char alunos[4][200];
+    char disciplina[3][200];
+    float notas[3][2];
+    int i, j;
+    float media[4];
+    int somaNota = 0;
+
+    for (i = 0; i < 3; i++)
+    {
+        printf("\nDigite a disciplina: ");
+        gets(disciplina[i]);
+
+        for (j = 0; j < 2; j++)
+        {
+            printf("Digite uma nota: ");
+            scanf("%f", &notas[i][j]);
+            somaNota += notas[i][j];
+        }
+
+        media[i] = somaNota / j;
+
+        somaNota = 0;
+        fflush(stdin);
+    }
+
+    printf("Exibindo dados\n");
+
+    printf("\n");
+
+    for (i = 0; i < 3; i++)
+    {
+        printf("\nDisicplina %s \n", disciplina[i]);
+
+        for (j = 0; j < 2; j++)
+        {
+            printf("Nota: %.1f \n", notas[i][j]);
+        }
+
+        printf("Media %.0f\n", media[i]);
+        
+        if (media[i] >= 7)
+        {
+            printf("APROVADO\n");
+        }
+        else if (media[i] >= 5 && media[i] < 7)
+        {
+            printf("RECU\n");
+        }
+        else if (media[i] < 5)
+
+        {
+            printf("reprovado\n");
+        }
+    }
+
+    getchar();
+    return 0;
+}
