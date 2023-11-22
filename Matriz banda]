@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main()
+{
+
+    
+    char banda[3][200];
+    char integrantes[3][5] [200];
+    int i, j;
+    
+    for (i = 0; i < 3; i++)
+    {
+        printf("\nDigite a banda: ");
+        gets(banda[i]);
+
+        for (j = 0; j < 5; j++)
+        {
+            printf("Digite os integrantes: ");
+            gets(integrantes[i][j]);
+    
+        }
+
+    
+        fflush(stdin);
+    }
+
+    printf("Exibindo dados\n");
+
+    printf("\n");
+
+    for (i = 0; i < 3; i++)
+    {
+        printf("\nBanda %s \n", banda[i]);
+
+        for (j = 0; j < 5; j++)
+        {
+            printf("integrantes: %s \n", integrantes[i][j]);
+        }
+
+    
+    }
+
+    getchar();
+    return 0;
+}
