@@ -1,0 +1,55 @@
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+
+    struct dados_aluno
+    {
+        char nome[200];
+        int idade;
+        float nota[2];
+    };
+
+    struct dados_aluno aluno[3];
+    int i;
+    int j ;
+
+    for (i = 0; i < 3; i++)
+    {
+        printf("\nDigite o nome do aluno: ");
+        gets(aluno[i].nome);
+        fflush(stdin);
+
+        printf("Digite a idade do aluno: ");
+        scanf("%d", &aluno[i].idade);
+        fflush(stdin);
+
+    for ( j = 0; j < 2 ; j++)
+    {
+
+        printf("Digite a nota do aluno: ");
+        scanf("%f", &aluno[i].nota[j]);
+        fflush(stdin);
+    }
+    }
+
+    printf("\nExibindo dados...");
+
+    for (i = 0; i < 3; i++)
+    {
+        
+        printf("\nNome do aluno:%s \n", aluno[i].nome);
+        printf("Idade do aluno: %d \n", aluno[i].idade);
+    
+    for ( j = 0; j < 2; j++)
+    {
+         printf("notas do aluno: %.2f \n", aluno[i].nota[j]);
+    
+    }
+    }
+
+
+getchar();
+    return 0;
+}
