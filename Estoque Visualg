@@ -1,0 +1,66 @@
+Algoritmo "semnome"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Professor   : Antonio Carlos Nicolodi 
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 16/02/2024
+Var
+// Seção de Declarações das variáveis 
+
+mesA,mesb,mesC, tempRep, lotRep, estoAt: real
+vendMed,Emin, Emax: real
+produto: caracter
+
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+
+escreva("Digite o produto:")
+leia(produto)
+
+
+escreva("Digite o valor de vendas do primeiros mês:")
+leia(mesA)
+
+escreva("Digite o valor de vendas do segundo mês:")
+leia(mesB)
+
+escreva("Digite o valor de vendas do terceiro mês:")
+leia(mesc)
+
+vendMed <- ((mesA + mesB + mesC) /3) /25
+escreval("Venda Média Diaria: ", VendMed)
+escreval()
+
+
+escreva("Digite o tempo de reposição do estoque:")
+leia(tempRep)
+
+
+escreva("Digite a quantide do lote de reposição do estoque:")
+leia(lotRep)
+
+escreva("Digite a quantidade do estoque atual:")
+leia(estoAT)
+
+
+Emin <- vendMed * tempRep
+Emax <- Emin + lotRep
+
+escreval()
+escreval("Estoque minimo: ", Emin)
+escreval("Estoque Maximo: ", Emax)
+
+escreval()
+escreval()
+
+se (estoAt > Emin) então
+escreval("Tomada de decisão: Comprar")
+senao escreval("Tomada de decisão: Não comprar")
+
+
+fimse
+
+
+
+Fimalgoritmo
