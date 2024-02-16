@@ -1,0 +1,67 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+  GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby, 
+  C#, OCaml, VB, Perl, Swift, Prolog, Javascript, Pascal, COBOL, HTML, CSS, JS
+  Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <stdio.h> 
+#include <stdlib.h>
+#include <string.h>
+
+int main (){
+
+char produto[20];
+int mes[3], tempRep, lotRep, estoAtu, i;
+float Emin, Emax, vendMed;
+
+
+printf("Digite o produto: ");
+gets(produto);
+
+for (i = 0; i < 3; i++)
+{
+    printf("Digite a quantidades de vendas no %d mes: ", i + 1);
+    scanf("%d", &mes[i]);
+
+}
+
+
+
+vendMed = ((mes [0] + mes[1] + mes [2]) /3) /25;
+printf("\n\nVenda media diaria: %.f", vendMed);
+
+
+printf("\n\nDigite o tempo de reposição do lote: ");
+scanf("%d", &tempRep);
+
+printf("Digite o quantidade do lote de reposição: ");
+scanf("%d", &lotRep);
+
+Emin = vendMed * tempRep;
+Emax = Emin + lotRep;
+
+
+printf("\n\nEstoque maximo: %f", Emax);
+printf("\nEstoque minimo: %f", Emin);
+
+if (estoAtu > Emin )
+{
+    printf("\nTomada de decisão: COMPRAR");
+} else 
+{
+      printf("\nTomada de decisão: NÃO COMPRAR");
+}
+
+
+
+
+
+
+
+
+
+
+
+}
