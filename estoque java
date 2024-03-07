@@ -39,37 +39,58 @@ public class Main
 		float trCy= 7;
 	    float lotrepCy = 60;
 	    float eaCy = 100;
-
 	    
 	    float vendaMediaIntel = ((MesUmIntel + MesDoisIntel + MesTresIntel) /3) /25;
-	    float EminIntel = (vendaMediaIntel + trIntel);
+	    float EminIntel = (vendaMediaIntel * trIntel);
 	    float EmaxIntel = (lotrepIntel + EminIntel);
 	    
 	    float vendaMediaAMD = ((MesUmAMD + MesDoisAMD + MesTresAMD) / 3) / 25;
-	    float EminAMD = (vendaMediaAMD + trAMD);
+	    float EminAMD = (vendaMediaAMD * trAMD);
 	    float EmaxAMD = (lotrepAMD + EminAMD);
 	   
 	    float vendaMediaCy = ((MesUmCy + MesDoisCy + MesTresCy) /3) /25;
-	    float EminCy = (vendaMediaCy + trCy);
+	    float EminCy = (vendaMediaCy * trCy);
 	    float EmaxCy = (lotrepCy + EminCy);
 	    
 	    
 	    
 	    
-	    
+	    System.out.println("");
 	    
 	    
 	    System.out.println("Venda media do Processador INTER: " +vendaMediaIntel);
-	    System.out.println("Venda media do Processador AMD: " +vendaMediaAMD);
-	    System.out.println("Venda media do Processador CYRIX: " +vendaMediaCy);
-	    
 	    System.out.println("Estoque maximo INTEL: " +EmaxIntel);
+	    System.out.println("Estoque minimo INTEL: " +EminIntel);
+	    
+	    if (eaIntel > EminIntel){
+	        System.out.println("COMPRAR");
+	    } else{
+	        System.out.println("NÃO COMPRAR");
+	    }
+	    
+	    System.out.println("");
+	    
+	    System.out.println("Venda media do Processador AMD: " +vendaMediaAMD);
 	    System.out.println("Estoque maximo AMD: " +EmaxAMD);
+	    System.out.println("Estoque minimo AMD: " +EminAMD);
+	    
+	    
+	    if (eaAMD > EminAMD){
+	        System.out.println("COMPRAR");
+	    } else{
+	        System.out.println("NÃO COMPRAR");}
+	    
+	    System.out.println("");
+	    
+	    System.out.println("Venda media do Processador CYRIX: " +vendaMediaCy);
+	    System.out.println("Estoque minimo CYRIX: " +EminCy);
 	    System.out.println("Estoque maximo CYRIX: " +EmaxIntel);
 	    
-	    System.out.println("Estoque minimo INTEL: " +EminIntel);
-	    System.out.println("Estoque minimo AMD: " +EminAMD);
-	    System.out.println("Estoque minimo CYRIX: " +EminCy);
+	    if (eaCy > EminCy){
+	        System.out.println("COMPRAR");
+	    } else{
+	        System.out.println("NÃO COMPRAR");}
+	    
 	    
 	}
 }
