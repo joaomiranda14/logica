@@ -39,18 +39,20 @@ public class Main
 		float trCy= 7;
 	    float lotrepCy = 60;
 	    float eaCy = 100;
+
 	    
 	    float vendaMediaIntel = ((MesUmIntel + MesDoisIntel + MesTresIntel) /3) /25;
-	    float vendaMediaAMD = ((MesUmAMD + MesDoisAMD + MesTresAMD) / 3) / 25;
-	    float vendaMediaCy = ((MesUmCy + MesDoisCy + MesTresCy) /3) /25;
-	   
 	    float EminIntel = (vendaMediaIntel + trIntel);
-	    float EminAMD = (vendaMediaAMD + trAMD);
-	    float EminCy = (vendaMediaCy + trCy);
-	    
 	    float EmaxIntel = (lotrepIntel + EminIntel);
+	    
+	    float vendaMediaAMD = ((MesUmAMD + MesDoisAMD + MesTresAMD) / 3) / 25;
+	    float EminAMD = (vendaMediaAMD + trAMD);
 	    float EmaxAMD = (lotrepAMD + EminAMD);
+	   
+	    float vendaMediaCy = ((MesUmCy + MesDoisCy + MesTresCy) /3) /25;
+	    float EminCy = (vendaMediaCy + trCy);
 	    float EmaxCy = (lotrepCy + EminCy);
+	    
 	    
 	    
 	    
