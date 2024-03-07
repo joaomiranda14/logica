@@ -1,0 +1,73 @@
+/******************************************************************************
+
+                            Online Java Compiler.
+                Code, Compile, Run and Debug java program online.
+Write your code in this editor and press "Run" button to execute it.
+
+*******************************************************************************/
+
+public class Main
+{
+	public static void main(String[] args) {
+		
+		float Emax;
+		float Emin;
+		float VMD;
+		
+		
+		String [] produto = {"Processador INTEL CORE", "Processador AMD" , "Processador CYRIX"};
+		
+		float MesUmIntel = 100;
+		float MesDoisIntel = 100;
+		float MesTresIntel = 100;
+		float trIntel = 5;
+	    float lotrepIntel = 50;
+	    float eaIntel = 70;
+	    
+	    
+	    float MesUmAMD =250;
+		float MesDoisAMD =350;
+		float MesTresAMD = 450;
+		float trAMD= 9;
+	    float lotrepAMD = 100;
+	    float eaAMD = 80;
+	    
+	    
+	    float MesUmCy = 500;
+		float MesDoisCy = 600;
+		float MesTresCy = 1000;
+		float trCy= 7;
+	    float lotrepCy = 60;
+	    float eaCy = 100;
+	    
+	    float vendaMediaIntel = ((MesUmIntel + MesDoisIntel + MesTresIntel) /3) /25;
+	    float vendaMediaAMD = ((MesUmAMD + MesDoisAMD + MesTresAMD) / 3) / 25;
+	    float vendaMediaCy = ((MesUmCy + MesDoisCy + MesTresCy) /3) /25;
+	   
+	    float EminIntel = (vendaMediaIntel + trIntel);
+	    float EminAMD = (vendaMediaAMD + trAMD);
+	    float EminCy = (vendaMediaCy + trCy);
+	    
+	    float EmaxIntel = (lotrepIntel + EminIntel);
+	    float EmaxAMD = (lotrepAMD + EminAMD);
+	    float EmaxCy = (lotrepCy + EminCy);
+	    
+	    
+	    
+	    
+	    
+	    
+	    System.out.println("Venda media do Processador INTER: " +vendaMediaIntel);
+	    System.out.println("Venda media do Processador AMD: " +vendaMediaAMD);
+	    System.out.println("Venda media do Processador CYRIX: " +vendaMediaCy);
+	    
+	    System.out.println("Estoque maximo INTEL: " +EmaxIntel);
+	    System.out.println("Estoque maximo AMD: " +EmaxAMD);
+	    System.out.println("Estoque maximo CYRIX: " +EmaxIntel);
+	    
+	    System.out.println("Estoque minimo INTEL: " +EminIntel);
+	    System.out.println("Estoque minimo AMD: " +EminAMD);
+	    System.out.println("Estoque minimo CYRIX: " +EminCy);
+	    
+	}
+}
