@@ -63,9 +63,9 @@ public class Main
 	    System.out.println("Estoque minimo INTEL: " +EminIntel);
 	    
 	    if (eaIntel > EminIntel){
-	        System.out.println("COMPRAR");
-	    } else{
 	        System.out.println("NÃO COMPRAR");
+	    } else{
+	        System.out.println("COMPRAR");
 	    }
 	    
 	    System.out.println("");
@@ -76,9 +76,9 @@ public class Main
 	    
 	    
 	    if (eaAMD > EminAMD){
-	        System.out.println("COMPRAR");
+	        System.out.println("NÃO COMPRAR");
 	    } else{
-	        System.out.println("NÃO COMPRAR");}
+	        System.out.println("COMPRAR");}
 	    
 	    System.out.println("");
 	    
@@ -87,9 +87,9 @@ public class Main
 	    System.out.println("Estoque maximo CYRIX: " +EmaxIntel);
 	    
 	    if (eaCy > EminCy){
-	        System.out.println("COMPRAR");
+	        System.out.println("NÃO COMPRAR");
 	    } else{
-	        System.out.println("NÃO COMPRAR");}
+	        System.out.println("COMPRAR");}
 	    
 	    
 	}
